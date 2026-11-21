@@ -1,0 +1,66 @@
+
+class Teman:
+    # Class Attribute
+    lokasi = "belakang UNTIRTA"
+
+    # Constructor
+    def __init__(self, nama, makanan):
+        # Instance Attribute
+        self.nama = nama
+        self.makanan = makanan
+
+    # Method perkenalan
+    def perkenalan(self):
+        print(f"{self.nama}: Halo, nama saya {self.nama}.")
+
+    # Method menyapa
+    def menyapa(self, nama_teman):
+        print(f"{self.nama}: Hai {nama_teman}, ayo makan bersama!")
+
+    # Method membahas lokasi
+    def membahas_lokasi(self, nama_teman):
+        print(f"{self.nama}: Kita makan ayam gecek di {self.lokasi}, ya, {nama_teman}.")
+
+    # Method membahas makanan
+    def membahas_makanan(self, nama_teman, makanan_teman):
+        print(f"{self.nama}: Saya mau makan {self.makanan}.")
+        print(f"{nama_teman}: Kalau saya mau makan {makanan_teman}.")
+
+
+# Membuat Object pertama
+teman1 = Teman("Aar", "ayam gecek biasa")
+
+# Membuat Object kedua
+teman2 = Teman("Naseh", "ayam gecek sambal pedas")
+
+
+# Menampilkan percakapan
+print("===== PERCAKAPAN AAR DAN NASEH =====")
+print()
+
+teman1.perkenalan()
+teman2.menyapa(teman1.nama)
+
+print()
+
+teman1.membahas_lokasi(teman2.nama)
+teman2.membahas_lokasi(teman1.nama)
+
+print()
+
+teman1.membahas_makanan(teman2.nama, teman2.makanan)
+
+print()
+print("===== OBROLAN MAKAN SIANG =====")
+
+print(f"{teman1.nama}: Seh, kamu sudah makan siang belum?")
+print(f"{teman2.nama}: Belum, Aar. Ayo makan ayam gecek di belakang UNTIRTA.")
+print(f"{teman1.nama}: Boleh! Kamu mau pesan ayam gecek apa?")
+print(f"{teman2.nama}: Aku mau ayam gecek sambal pedas. Kalau kamu?")
+print(f"{teman1.nama}: Aku pesan ayam gecek biasa dulu.")
+print(f"{teman2.nama}: Oke, kita makan bareng, ya!")
+print(f"{teman1.nama}: Siap, semoga tidak antre panjang.")
+print(f"{teman2.nama}: Ayo berangkat sebelum makin lapar!")
+
+print()
+print("===== PROGRAM SELESAI =====")
